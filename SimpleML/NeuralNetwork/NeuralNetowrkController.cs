@@ -26,5 +26,16 @@ namespace SimpleML.NeuralNetwork
 
             //Add Initialization of neurons, Biases, Weights.
         }
+
+        private void InitNeurons()
+        {
+            List<float[]> neuronList = new List<float[]>();
+            for (int i = 0; i < layers.Length; i++)
+            {
+                neuronList.Add(new float[layers[i]]);
+            }
+
+            neurons = neuronList.ToArray();
+        }
     }
 }
